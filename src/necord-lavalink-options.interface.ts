@@ -1,5 +1,5 @@
 import { ManagerOptions } from 'lavalink-client';
 
-export type NecordLavalinkModuleOptions = Omit<ManagerOptions, 'sendToShard'> & {
+export interface NecordLavalinkModuleOptions extends Omit<ManagerOptions, 'sendToShard'> {
 	sendToShard?: ManagerOptions['sendToShard'];
-};
+}

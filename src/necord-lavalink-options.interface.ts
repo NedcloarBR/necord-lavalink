@@ -1,3 +1,6 @@
 import { ManagerOptions } from 'lavalink-client';
 
-export interface NecordLavalinkModuleOptions extends ManagerOptions {}
+// Make sendToShard method optional
+export type NecordLavalinkModuleOptions = Omit<ManagerOptions, 'sendToShard'> & {
+	sendToShard?: (guildId: string, packet: any) => void;
+};

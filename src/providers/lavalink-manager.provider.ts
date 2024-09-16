@@ -1,6 +1,6 @@
 import { Provider } from '@nestjs/common';
 import { LAVALINK_MODULE_OPTIONS } from '../necord-lavalink.module-definition';
-import { GuildShardPayload, LavalinkManager } from 'lavalink-client';
+import { LavalinkManager } from 'lavalink-client';
 import { NecordLavalinkModuleOptions } from '../necord-lavalink-options.interface';
 import { Client } from 'discord.js';
 

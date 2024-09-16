@@ -11,7 +11,6 @@ import {
 	OnModuleInit
 } from '@nestjs/common';
 import * as ProvidersMap from './providers';
-import { DiscoveryModule } from '@nestjs/core';
 import { DestroyReasons, LavalinkManager } from 'lavalink-client';
 import { Client } from 'discord.js';
 import { LavalinkListenersModule } from './listeners';
@@ -21,7 +20,7 @@ const Providers = Object.values(ProvidersMap);
 
 @Global()
 @Module({
-	imports: [DiscoveryModule],
+	imports: [LavalinkListenersModule],
 	providers: Providers,
 	exports: Providers
 })
